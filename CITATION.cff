@@ -1,0 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Modelo caótico del cáncer
+message: >-
+  Gemelos Digitales / Ingeniería Biomédica / Tecnológico
+  Nacional de México
+type: software
+authors:
+  - email: L22211746@tijuana.tecn.mx
+    given-names: Bricia Idalia
+    family-names: Arellano Salones
+    affiliation: Tecnológico Nacional de México
+repository-code: 'https://github.com/bias8/Practica2GD'
+keywords:
+  - Cáncer e inmunoterapia
+  - Caos
+  - Estabilidad
+  - Simulaciones numéricas
+  - Sistema no lineal
+license: BSD-2-Clause
+version: '1.0'
+date-released: '2026-03-24'

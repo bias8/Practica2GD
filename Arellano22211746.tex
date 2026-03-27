@@ -1,0 +1,182 @@
+
+\documentclass[letterpaper,11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Friday, March 27, 2026 00:54:53}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\input{tcilatex}
+\renewcommand{\baselinestretch}{1.15}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+\pretolerance=2000 \tolerance=3000
+\renewcommand{\abstractname}{Resumen}
+
+\begin{document}
+
+\title{Pr\'{a}ctica 2:\ Caos en sistemas biol\'{o}gicos}
+\author{Arellano Salones Bricia Idalia $22211746$ \\
+%EndAName
+Departamento de Ingenier\'{\i}a El\'{e}ctrica y Electr\'{o}nica\\
+Tecnol\'{o}gico Nacional de M\'{e}xico / Instituto Tecnol\'{o}gico de Tijuana%
+}
+\maketitle
+
+\noindent \textbf{Palabras clave: }C\'{a}ncer e inmunoterapia; Caos;
+Estabilidad; Simulaciones num\'{e}ricas; Sistema no lineal.
+
+\noindent
+
+\noindent Correo: \textbf{L22211746@tectijuana.edu.mx}
+
+\noindent \noindent Carrera: \textbf{Ingenier\'{\i}a Biom\'{e}dica }
+
+\noindent Asignatura: \textbf{Biolog\'{\i}a de Sistemas}
+
+\noindent Profesor: \href{https://biomath.xyz/}{\textbf{Dr. Paul Antonio
+Valle Trujillo}} (paul.valle@tectijuana.edu.mx)
+
+\section{Modelo matem\'{a}tico}
+
+El modelo matem\'{a}tico que describe la din\'{a}mica de tres poblaciones
+celulares est\'{a} descrito por las siguientes tres ecuaciones diferenciales
+ordinarias de primer orden:%
+\begin{eqnarray}
+\dot{x} &=&r_{1}x\left( 1-b_{1}x\right) -a_{12}xy-a_{13}xz,  \label{x} \\
+\dot{y} &=&r_{2}y\left( 1-b_{2}y\right) -a_{21}xy,  \label{y} \\
+\dot{z} &=&\left( r_{3}-a_{31}\right) xz-d_{3}z+\rho _{i},  \label{z}
+\end{eqnarray}%
+donde todos los par\'{a}metros son positivos y el par\'{a}metro de control $%
+\rho _{i}\geq 0.$
+
+\section{Positividad del sistema}
+
+Con base en el trabajo de De Leenheer and Aeyels, se realiza el siguiente c%
+\'{a}lculo para establecer la positividad del sistema: 
+\begin{eqnarray*}
+\left. \dot{x}\right\vert _{x=0} &=&r_{1}\left( 0\right) \left(
+1-b_{1}\left( 0\right) \right) -a_{12}\left( 0\right) y-a_{13}\left(
+0\right) z=0, \\
+\left. \dot{y}\right\vert _{y=0} &=&r_{2}\left( 0\right) \left(
+1-b_{2}\left( 0\right) \right) -a_{21}x\left( 0\right) =0, \\
+\left. \dot{z}\right\vert _{z=0} &=&\left( r_{3}-a_{31}\right) x\left(
+0\right) -d_{3}\left( 0\right) +\rho _{i}=\rho _{i},
+\end{eqnarray*}%
+por lo tanto, se establece el siguiente resultado:
+
+\noindent \textbf{Resultado I. Positividad de las soluciones. }Las
+soluciones $\left( x\left( t\right) ,y\left( t\right) ,z\left( t\right)
+\right) $ y \ semitrayectorias positivas $\left( \Gamma ^{+}\right) $ del
+sistema (\textit{\ref{x}})-(\textit{\ref{z}}) ser\'{a}n positivamente
+invariantes y oara cada condici\'{o}n inicial no negativa $x\left( 0\right)
+,y\left( 0\right) ,z\left( 0\right) \geq 0$, se localizar\'{a}n en el
+siguiente dominio:\ 
+\begin{equation*}
+\mathbf{R}_{+,0}^{3}=\left\{ x\left( t\right) ,y\left( t\right) ,z\left(
+t\right) \geq 0\right\} .
+\end{equation*}
+
+\section{Puntos de equilibrio libre de c\'{e}lulas patol\'{o}gicas}
+
+Con el objetivo de determinar condiciones para la eliminaci\'{o}n de la
+poblaci\'{o}n de c\'{e}lulas patal\'{o}gicas, se calculan los equilibrio
+donde $x^{\ast }=0,$ es decir,%
+\begin{eqnarray*}
+x &=&0, \\
+r_{2}y\left( 1-b_{2}y\right) -a_{21}xy &=&0, \\
+\left( r_{3}-a_{31}\right) xz-d_{3}z+\rho _{i} &=&0,
+\end{eqnarray*}%
+simplificando se obtiene lo siguiente\ 
+
+$\func{assume}\left( r_{2},\func{positive}\right) =\allowbreak \left(
+0,\infty \right) $
+
+$\func{assume}\left( b_{2},\func{positive}\right) =\allowbreak \left(
+0,\infty \right) $
+
+$\func{assume}\left( d_{3},\func{positive}\right) =\allowbreak \left(
+0,\infty \right) $%
+\begin{eqnarray*}
+r_{2}y\left( 1-b_{2}y\right) &=&0 \\
+-d_{3}z+\rho _{i} &=&0
+\end{eqnarray*}%
+entonces los equilibrios libres de c\'{e}lulas patol\'{o}gicas son los
+siguientes:%
+\begin{eqnarray*}
+\left( x_{6}^{\ast },y_{6}^{\ast },z_{6}^{\ast }\right) &=&\left( 0,0,\frac{%
+\rho _{i}}{d_{3}}\right) , \\
+\left( x_{4}^{\ast },y_{4}^{\ast },z_{4}^{\ast }\right) &=&\left( 0,\frac{1}{%
+b_{2}},\frac{\rho _{i}}{d_{3}}\right) .
+\end{eqnarray*}
+
+\section{Estabilidad local}
+
+Ahora, con el prop\'{o}sito de establecer condiciones para asegurar la
+estabilidad asint\'{o}tica local del equilibrio $\left( x_{4}^{\ast
+},y_{4}^{\ast },z_{4}^{\ast }\right) $, se calcula la matriz Jacobiana:%
+\begin{equation*}
+J=\left[ 
+\begin{array}{ccc}
+-a_{12}\,y-a_{13}\,z-r_{1}\,{\left( b_{1}\,x-1\right) }-b_{1}\,r_{1}\,x & 
+-a_{12}\,x & -a_{13}\,x \\ 
+-a_{21}\,y & -a_{21}\,x-r_{2}\,{\left( b_{2}\,y-1\right) }-b_{2}\,r_{2}\,y & 
+0 \\ 
+-z\,{\left( a_{31}-r_{3}\right) } & 0 & -d_{3}-x\,{\left(
+a_{31}-r_{3}\right) }%
+\end{array}%
+\right] ,
+\end{equation*}%
+y se eval\'{u}a como se indica a continuaci\'{o}n:
+
+\begin{eqnarray*}
+\left. J\right\vert _{\left( x_{4}^{\ast },y_{4}^{\ast },z_{4}^{\ast
+}\right) } &=&\left[ 
+\begin{array}{ccc}
+-a_{12}\,y-a_{13}\,z-r_{1}\,{\left( b_{1}\,x-1\right) }-b_{1}\,r_{1}\,x & 
+-a_{12}\,x & -a_{13}\,x \\ 
+-a_{21}\,y & -a_{21}\,x-r_{2}\,{\left( b_{2}\,y-1\right) }-b_{2}\,r_{2}\,y & 
+0 \\ 
+-z\,{\left( a_{31}-r_{3}\right) } & 0 & -d_{3}-x\,{\left(
+a_{31}-r_{3}\right) }%
+\end{array}%
+\right] _{x=0,y=\frac{1}{b_{2}},z=\frac{\rho _{i}}{d_{3}}}, \\
+\left. J\right\vert _{\left( x_{4}^{\ast },y_{4}^{\ast },z_{4}^{\ast
+}\right) } &=&\left[ 
+\begin{array}{ccc}
+r_{1}-\frac{a_{12}}{b_{2}}-\frac{a_{13}\rho _{i}}{d_{3}} & 0 & 0 \\ 
+-\frac{a_{21}}{b_{2}} & -r_{2} & 0 \\ 
+\frac{\rho _{i}}{d_{3}}\left( r_{3}-a_{31}\right) & 0 & -d_{3}%
+\end{array}%
+\right] ,
+\end{eqnarray*}
+:
+
+con base en la estructura de la matriz (matriz triangular),\ los valores
+propios est\'{a}n dados por: 
+\begin{eqnarray*}
+\lambda _{1} &=&r_{1}-\frac{a_{12}}{b_{2}}-\frac{a_{13}\rho _{i}}{d_{3}}, \\
+\lambda _{2} &=&-r_{2}, \\
+\lambda _{3} &=&-d_{3},
+\end{eqnarray*}%
+por lo tanto, para asegurar que el equilibrio es $\left( x_{4}^{\ast
+},y_{4}^{\ast },z_{4}^{\ast }\right) $ es local asint\'{o}ticamente estable,
+se establece la siguiente condici\'{o}n:\ 
+\begin{equation*}
+r_{1}-\frac{a_{12}}{b_{2}}-\frac{a_{13}\rho _{i}}{d_{3}}<0,
+\end{equation*}%
+lo cual se resuelve para el par\'{a}metro de tratamiento $\rho _{i}$ 
+\begin{equation*}
+\rho _{i}>\left( r_{1}-\frac{a_{12}}{b_{2}}\right) \frac{d_{3}}{a_{13}}.
+\end{equation*}
+
+\end{document}

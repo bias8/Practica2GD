@@ -34,11 +34,14 @@ tratamiento de inmunoterapia.
 Palabras clave: Caos; Conjuntos Compactos Invariantes; Condiciones de Estabilidad; Simulaciones Numéricas; Solución de EDOs.
 
 ## Actividades a realizar
-1. Diseñar un diagrama biológico sobre la dinámica del sistema y la interacción entre sus variables con las figuras de https://www.biorender.com/.
-2. 
-3.
-4.
-...
+1. Desarrollar un algoritmo en MATLAB que permita encontrar los puntos de equilibrio y la matriz Jacobiana del sistema.
+2. Encontrar los equilibrios del sistema y la estabilidad de estos mismos para 5 condiciones iniciales diferentes (Atractor caótico, órbita periódica, ciclo límite 1, ciclo límite 2, equilibrio).
+3. Gráficar y  comparar en MATLAB los métodos de Euler, Heun y Runge-Kutta de 4 <sup>to</sup>  orden para cada condición inicial.
+4. Calcular el error de cada método en los planos x, y y z para cada conjunto de condiciones iniciales.
+5. Aplicar un tratamiento a cada condición inicial para guiarlo al equilibrio del sistema y graficar los resultados.
+6. Realizar un análisis matemático del modelo y compararlo con los resultados obtenidos en MATLAB.
+7. Diseñar un diagrama biológico sobre la dinámica del sistema y la interacción entre sus variables con las figuras de https://www.biorender.com/.
+
 
 ## Lista de archivos incluidos en el repositorio
 1. Cuaderno computacional de MATLAB [.mlx].

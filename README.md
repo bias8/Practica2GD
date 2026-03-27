@@ -1,9 +1,9 @@
-[![Open in MATLAB Online]
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=bias8/Practica2GD)
 
 # Práctica 2: Caos en sistemas biológicos
 
 ## Información de la estudiante
-Paul A. Valle \[05211261]; paul.vt@tijuana.tecn.mx
+Bricia Idalia Arellano Salones \[22211746]; L22211746@tijuana.tecnm.mx
 
 Gemelos Digitales
 
@@ -34,7 +34,7 @@ tratamiento de inmunoterapia.
 Palabras clave: Caos; Conjuntos Compactos Invariantes; Condiciones de Estabilidad; Simulaciones Numéricas; Solución de EDOs.
 
 ## Actividades a realizar
-1. Diseñar un diagrama biológico sobre la dinámica del sistema y la interacción entre sus variables con las figuras de https://bioart.niaid.nih.gov/ o https://www.biorender.com/.
+1. Diseñar un diagrama biológico sobre la dinámica del sistema y la interacción entre sus variables con las figuras de https://www.biorender.com/.
 2. 
 3.
 4.
